@@ -9,13 +9,15 @@ const restaurantList = data => {
 
         restaurantElement.innerHTML = `
             <article class="restaurant-item">
-            <img class="item-thumbnail" src="${pictureId}" alt="${name}">
-            <p class="item-city">Kota ${city}</p>
-            <div class="item-content">
-                <p class="content-rating">Rating: ${rating}</p>
-                <h3 class="content-title">${name}</h3>
-                <p class="content-description">${description}</p>
-            </div>
+                <div class="thumbnail">
+                    <img class="item-thumbnail" src="${pictureId}" alt="${name}">
+                    <p class="item-city">Kota ${city}</p>
+                </div>
+                <div class="item-content">
+                    <p class="content-rating">Rating: ${rating}</p>
+                    <h3 class="content-title"><a href="#">${name}</a></h3>
+                    <p class="content-description">${description}</p>
+                </div>
             </article>
         
         `
