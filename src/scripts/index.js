@@ -21,5 +21,3 @@ hero.addEventListener('click', function() {
 main.addEventListener('click', function () {
     drawer.classList.remove('open');
 })
-
-console.log('hello coders');
