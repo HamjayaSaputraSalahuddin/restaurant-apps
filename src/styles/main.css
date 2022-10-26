@@ -32,6 +32,10 @@ html, body {
   transform: translate(0, 0);
 }
 
+.navbar {
+  padding: 15px;
+}
+
 .nav-list {
   display: flex;
   list-style-type: none;
