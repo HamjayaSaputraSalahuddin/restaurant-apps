@@ -159,3 +159,10 @@ main {
   border-radius: 0 5px 5px 0;
 }
 
+footer {
+  width: 100%;
+  background-color: #dddddd;
+  padding: 12px;
+  text-align: center;
+}
+
