@@ -39,9 +39,11 @@
     }
 }
 
-/* @media screen and (min-width: 455px){
-    
-} */
+@media screen and (min-width: 455px){
+    .navbar {
+        font-size: 18px;
+    }
+}
 
 @media screen and (min-width: 500px){
 
