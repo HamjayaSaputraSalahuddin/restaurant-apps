@@ -1,4 +1,6 @@
 import DrawerInitiator from '../utils/drawer-initiator';
+import UrlParser from '../routes/url-parser';
+import routes from '../routes/routes';
 
 class App {
   constructor({ button, drawer, content }) {
@@ -15,6 +17,13 @@ class App {
       drawer: this.__drawer,
       content: this.__content,
     });
+  }
+
+  async renderPage() {
+    const url = UrlParser.parseActiveUrlWithCombiner();
+    const page = routes[url];
+    this.__content.innerHTML = await page.render();
+    await page.afterRender();
   }
 }
 
