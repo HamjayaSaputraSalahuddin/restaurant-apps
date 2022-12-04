@@ -1,13 +1,15 @@
 import data from '../DATA.json';
 
-const restaurantList = data => {
-    const restaurantItem = document.querySelector('#restaurantList');
-    restaurantItem.innerHTML = ''
-    data.forEach(restaurant => {
-        const {name, description, pictureId, city, rating} = restaurant;
-        const restaurantElement = document.createElement('div')
+const restaurantList = (data) => {
+  const restaurantItem = document.querySelector('#restaurantList');
+  restaurantItem.innerHTML = '';
+  data.forEach((restaurant) => {
+    const {
+      name, description, pictureId, city, rating,
+    } = restaurant;
+    const restaurantElement = document.createElement('div');
 
-        restaurantElement.innerHTML = `
+    restaurantElement.innerHTML = `
             <article class="restaurant-item">
                 <div class="thumbnail">
                     <img class="item-thumbnail" src="${pictureId}" alt="${name}">
@@ -20,9 +22,9 @@ const restaurantList = data => {
                 </div>
             </article>
         
-        `
-        restaurantItem.appendChild(restaurantElement);
-    });
-}
+        `;
+    restaurantItem.appendChild(restaurantElement);
+  });
+};
 
 restaurantList(data.restaurants);
