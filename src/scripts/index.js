@@ -7,7 +7,7 @@ import '../styles/main.css';
 const app = new App({
   button: document.querySelector('#menu'),
   drawer: document.querySelector('#drawer'),
-  content: document.querySelector('#main'),
+  content: document.querySelector('main'),
 });
 
 window.addEventListener('hashchange', () => {

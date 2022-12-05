@@ -1,17 +1,9 @@
 import RestaurantDataSource from '../../data/data-source';
-import createRestaurantItemTemplate from '../templates/template-creator';
+import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const HomePage = {
   async render() {
-    return `
-        <div class="hero">
-        <div class="hero-inner">
-          <h1 class="hero-title">Nganre Place!</h1>
-          <p class="hero-tagline">Cari tempat makan yang pas yuk!</p>
-        </div>
-      </div>
-    
-      <main id="main">
+    return `  
         <section class="content">
           <div class="explore">
             <h2  tabindex="0" class="explore-label">Explore Restaurant</h2>
@@ -20,7 +12,6 @@ const HomePage = {
             </div>
           </div>
         </section>
-      </main>
         `;
   },
 
