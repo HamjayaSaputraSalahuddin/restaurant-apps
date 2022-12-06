@@ -5,13 +5,52 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <div class="restaurant-detail-container">
         <div class="restaurant-detail-thumbnail">
             <h2 class="restaurant-detail-name">${restaurant.name}</h2>
-            <img src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}" alt="${restaurant.name}" class="restaurant-detail-thumbnail">
+            <img src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}" alt="${restaurant.name}" class="restaurant-detail-poster">
         </div>
         <div class="restaurant-detail-info">
             <h2 class="information-title">Information</h2>
-            <p class="restaurant-detail-city">Kota ${restaurant.city}</p>
-            <p class="restaurant-detail-rating">Rating: ${restaurant.rating}</p>
-            <p class="restaurant-detail-desc">${restaurant.description}</p>
+                <div class="info-flex">
+                    <p class="restaurant-detail-address">Alamat: ${restaurant.address}</p>
+                    <p class="restaurant-detail-categories">Kategori: ${restaurant.categories.map((category) => category.name).join(' & ')}</p>
+                    <p class="restaurant-detail-city">Kota: ${restaurant.city}</p>
+                    <p class="restaurant-detail-rating">Rating: ${restaurant.rating}</p>
+                </div>
+            <h2 class="information-desc">Description</h2>
+                <div class="info-desc">
+                    <p class="restaurant-detail-desc">${restaurant.description}</p>
+                </div>
+        </div>
+
+        <div class="restaurant-detail-menus">
+            <h2 class="information-detail-menus">Menu</h2>
+            <div class="info-menu">
+                <div class="info-menu-title">
+                    <h4>Foods</h4>
+                </div>
+                <div class="restaurant-detail-menu"> 
+                    <p>${restaurant.menus.foods.map((food) => food.name).join(' | ')}</p>
+                </div>
+                <div class="info-menu-title">
+                    <h4>Drinks</h4>
+                </div>
+                <div class="restaurant-detail-menu"> 
+                    <p>${restaurant.menus.drinks.map((drink) => drink.name).join(' | ')}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="restaurant-detail-reviews">
+            <h2 class="detail-review-title">Review</h2>
+            <div class="restaurant-detail-review">
+                ${restaurant.customerReviews.map((customer) => `
+                    <div class="review-customer-wrap">
+                        <p class="reviewer">${customer.name}</p>
+                        <p class="reviewer">${customer.date}</p>
+                        <p class="reviewer">${customer.review}</p>
+                    </div>
+                `).join('')}
+                </div>
+            </div>
         </div>
     </div>
 `;

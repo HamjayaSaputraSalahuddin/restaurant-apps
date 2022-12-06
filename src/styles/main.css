@@ -17,6 +17,7 @@ html, body {
   justify-content: space-between;
   background-color: #ffff;
   padding: 10px 10px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
 .header-menu {
@@ -166,7 +167,7 @@ main {
   border-radius: 0 5px 5px 0;
 }
 
-.restaurant-detail {
+.restaurant-detail-container {
   margin: 0 auto;
   width: 100%;
   max-width: 800px;
@@ -175,13 +176,114 @@ main {
   gap: 18px 16px;
 }
 
-.restaurant-detail .restaurant-poster-detail {
-  width: 100%;
-  max-width: 400px;
+.restaurant-detail-thumbnail {
+  border-radius: 5px;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  overflow: hidden;
+  text-align: center;
 }
 
-.restaurant-detail .restaurant-detail-info h4 {
+.restaurant-detail-thumbnail .restaurant-detail-name {
+  margin-top: 20px;
+}
+
+.restaurant-detail-poster {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 20px;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.restaurant-detail-container .restaurant-detail-info {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
   margin: 8px 0;
+}
+
+.restaurant-detail-container .restaurant-detail-info .info-flex {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.restaurant-detail-address {
+  margin: 10px;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #dddd;
+}
+
+.restaurant-detail-city {
+  margin: 10px;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #dddd;
+}
+
+.restaurant-detail-rating {
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #dddd;
+}
+
+.restaurant-detail-categories {
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #dddd;
+}
+
+.restaurant-detail-container .restaurant-detail-menus {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 8px 0;
+}
+
+.restaurant-detail-container .restaurant-detail-menus .restaurant-detail-menu {
+  font-weight: bold;
+}
+
+.info-menu-title h4{
+  margin: 10px auto;
+  width: 70px;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #dddd;
+}
+
+.restaurant-detail-reviews {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 8px 0;
+}
+
+.restaurant-detail-reviews .restaurant-detail-review {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-customer-wrap {
+  margin: 10px auto;
+  width: 100%;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #dddd;
+}
+
+.restaurant-detail-reviews .restaurant-detail-review .reviewer{
+  font-weight: bold;
 }
 
 footer {
