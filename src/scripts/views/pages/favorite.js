@@ -18,8 +18,9 @@ const LikePage = {
   async afterRender() {
     const restaurants = await FavoriteRestaurantIdb.getAllResto();
     const restaurantContainer = document.querySelector('#restaurantList');
-    restaurants.forEach((restaurant) => {
-      restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+    restaurantContainer.innerHTML = '';
+    restaurants.forEach((restaurants) => {
+      restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurants);
     });
   },
 };
