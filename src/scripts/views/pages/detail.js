@@ -30,6 +30,12 @@ const DetailPage = {
       },
     });
 
+    const skipLinkElem = document.querySelector('.skip-link');
+    skipLinkElem.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.querySelector('#main').focus();
+    });
+
     const Hero = document.querySelector('.hero');
     Hero.style.display = 'none';
   },

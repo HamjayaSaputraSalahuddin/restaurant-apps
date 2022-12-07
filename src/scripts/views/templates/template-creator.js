@@ -10,10 +10,10 @@ const createRestaurantDetailTemplate = (restaurant) => `
         <div class="restaurant-detail-info">
             <h2 tabindex="0" class="information-title">Information</h2>
                 <div class="info-flex">
-                    <p class="restaurant-detail-address">Alamat: ${restaurant.address}</p>
-                    <p class="restaurant-detail-categories">Kategori: ${restaurant.categories.map((category) => category.name).join(' & ')}</p>
-                    <p class="restaurant-detail-city">Kota: ${restaurant.city}</p>
-                    <p class="restaurant-detail-rating">Rating: ${restaurant.rating}</p>
+                    <p class="restaurant-info">Alamat: ${restaurant.address}</p>
+                    <p class="restaurant-info">Kategori: ${restaurant.categories.map((category) => category.name).join(' & ')}</p>
+                    <p class="restaurant-info">Kota: ${restaurant.city}</p>
+                    <p class="restaurant-info">Rating: ${restaurant.rating}</p>
                 </div>
             <h2 tabindex="0" class="information-desc">Description</h2>
                 <div class="info-desc">

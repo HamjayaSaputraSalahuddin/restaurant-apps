@@ -212,27 +212,8 @@ main {
   font-weight: bold;
 }
 
-.restaurant-detail-address {
+.restaurant-info {
   margin: 10px;
-  border-radius: 4px;
-  padding: 5px;
-  background-color: #dddd;
-}
-
-.restaurant-detail-city {
-  margin: 10px;
-  border-radius: 4px;
-  padding: 5px;
-  background-color: #dddd;
-}
-
-.restaurant-detail-rating {
-  border-radius: 4px;
-  padding: 5px;
-  background-color: #dddd;
-}
-
-.restaurant-detail-categories {
   border-radius: 4px;
   padding: 5px;
   background-color: #dddd;
