@@ -37,8 +37,9 @@
     .item-city {
         margin-bottom: 100%;
     }
-
-    .restaurant-detail-container .restaurant-detail-info .info-flex {
+    
+    .info-flex {
+        display: grid;
         grid-template-columns: 2fr 2fr;
     }
 }
@@ -57,6 +58,11 @@
 
     .header-menu {
         display: none;
+    }
+
+    .info-flex {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
     }
 }
 
@@ -80,6 +86,10 @@
     .restaurant-detail-container .restaurant-detail-desc{
         grid-column-start: 1;
         grid-column-end: 3;
+    }
+    .info-flex {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
