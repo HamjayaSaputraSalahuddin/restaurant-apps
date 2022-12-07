@@ -73,7 +73,8 @@ html, body {
 .hero-inner {
   margin: 0 auto;
   max-width: 800px;
-  color: #fff;}
+  color: #fff;
+}
 
 .hero-title {
   font-weight: 600;

@@ -19,9 +19,11 @@ const LikePage = {
     const restaurants = await FavoriteRestaurantIdb.getAllResto();
     const restaurantContainer = document.querySelector('#restaurantList');
     restaurantContainer.innerHTML = '';
-    restaurants.forEach((restaurants) => {
-      restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurants);
+    restaurants.forEach((restaurant) => {
+      restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });
+    const Hero = document.querySelector('.hero');
+    Hero.style.display = 'flex';
   },
 };
 

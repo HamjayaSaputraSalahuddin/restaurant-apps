@@ -2,44 +2,45 @@ import FavoriteRestaurantIdb from '../data/favorite-idb';
 import { createLikeButtonTemplate, createLikedButtonTemplate } from '../views/templates/template-creator';
 
 const LikeButtonInitiator = {
-  async init({ likeButtonContainer, restaurant }) {
-    this.__likeButtonContainer = likeButtonContainer;
-    this.__restaurant = restaurant;
+  async init({ likeButtonContainer, resto }) {
+    this._likeButtonContainer = likeButtonContainer;
+    this._resto = resto;
 
-    await this.__renderButton();
+    await this._renderButton();
   },
-  async __renderButton() {
-    const { id } = this.__restaurant;
 
-    if (await this.__isRestoExist(id)) {
-      this.__renderLiked();
+  async _renderButton() {
+    const { id } = this._resto;
+
+    if (await this._isRestoExist(id)) {
+      this._renderLiked();
     } else {
-      this.__renderLike();
+      this._renderLike();
     }
   },
 
-  async __isRestoExist(id) {
-    const restaurant = await FavoriteRestaurantIdb.getResto(id);
-    return !!restaurant;
+  async _isRestoExist(id) {
+    const resto = await FavoriteRestaurantIdb.getResto(id);
+    return !!resto;
   },
 
-  __renderLike() {
-    this.__likeButtonContainer.innerHTML = createLikeButtonTemplate();
+  _renderLike() {
+    this._likeButtonContainer.innerHTML = createLikeButtonTemplate();
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavoriteRestaurantIdb.putResto(this.__restaurant);
-      this.__renderButton();
+      await FavoriteRestaurantIdb.putResto(this._resto);
+      this._renderButton();
     });
   },
 
-  __renderLiked() {
-    this.__likeButtonContainer.innerHTML = createLikedButtonTemplate();
+  _renderLiked() {
+    this._likeButtonContainer.innerHTML = createLikedButtonTemplate();
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavoriteRestaurantIdb.deleteResto(this.__restaurant.id);
-      this.__renderButton();
+      await FavoriteRestaurantIdb.deleteResto(this._resto.id);
+      this._renderButton();
     });
   },
 };

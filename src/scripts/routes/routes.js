@@ -5,7 +5,7 @@ import HomePage from '../views/pages/home';
 const routes = {
   '/': HomePage,
   '/home': HomePage,
-  '/favorite': LikePage,
+  '/like': LikePage,
   '/detail/:id': DetailPage,
 };
 
