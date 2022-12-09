@@ -21,7 +21,7 @@ html, body {
 }
 
 .header-menu {
-  margin-top: 15px;
+  margin-top: 10px;
   text-align: center;
   font-size: 20px;
   width: 44px;
@@ -29,6 +29,8 @@ html, body {
   text-decoration: none;
   color: black;
   font-weight: bold;
+  border: 0;
+  background-color: #ffff;
 }
 
 .open {
