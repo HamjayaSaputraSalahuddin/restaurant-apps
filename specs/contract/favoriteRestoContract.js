@@ -43,7 +43,7 @@ const itActsAsFavoriteRestoModel = (favoriteResto) => {
         ]);
     });
 
-    it('should handle request to remove a resto even though the resto has not been added', async () => {
+    fit('should handle request to remove a resto even though the resto has not been added', async () => {
         favoriteResto.putResto({ id: 1 });
         favoriteResto.putResto({ id: 2 });
         favoriteResto.putResto({ id: 3 });

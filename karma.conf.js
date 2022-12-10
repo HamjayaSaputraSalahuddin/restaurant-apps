@@ -24,6 +24,10 @@ module.exports = function (config) {
       'specs/**/*Spec.js': ['webpack', 'sourcemap'],
     },
 
+    jasmine: {
+      verboseDeprecations: true,
+    },
+
     webpack: {
       // karma watches the test entry points
       // (you don't need to specify the entry option)

@@ -2,9 +2,7 @@
     "env": {
         "browser": true,
         "es2021": true,
-        "node": true,
-        "jasmine": true,
-        "codeceptjs/codeceptjs": true
+        "node": true
     },
     "extends": "airbnb-base",
     "overrides": [
@@ -26,6 +24,6 @@
         "no-await-in-loop": 0
     },
     "plugins": [
-        "jasmine", "codeceptjs"
+        "jasmine"
     ]
 }
