@@ -1,5 +1,7 @@
 import './data/data-source';
 import 'regenerator-runtime'; /* for async await transpile */
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import App from './views/app';
 import '../styles/responsive.css';
 import '../styles/main.css';
@@ -15,7 +17,7 @@ window.addEventListener('hashchange', () => {
   app.renderPage();
 });
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   app.renderPage();
   swRegister();
 });

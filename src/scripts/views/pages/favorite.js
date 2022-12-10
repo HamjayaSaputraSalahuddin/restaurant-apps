@@ -1,5 +1,5 @@
 import FavoriteRestaurantIdb from '../../data/favorite-idb';
-import { createRestaurantItemTemplate } from '../templates/template-creator';
+import { createRestaurantItemTemplate, createSkeletonMovieTemplate } from '../templates/template-creator';
 
 const LikePage = {
   async render() {
@@ -8,7 +8,7 @@ const LikePage = {
             <div class="explore">
               <h2  tabindex="0" class="explore-label">Favorite Restaurant</h2>
               <div class="restaurants">
-                <div class="restaurantList" id="restaurantList"></div>
+                <div class="restaurantList" id="restaurantList">${createSkeletonMovieTemplate(20)}</div>
               </div>
             </div>
           </section>

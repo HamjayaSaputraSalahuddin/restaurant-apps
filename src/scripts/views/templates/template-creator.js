@@ -1,11 +1,37 @@
 /* eslint-disable import/prefer-default-export */
 import CONFIG from '../../globals/config';
 
+const createSkeletonMovieTemplate = (count) => {
+  let template = '';
+
+  for (let i = 0; i < count; i += 1) {
+    template += `
+      <div class="restaurant-detail-thumbnail">
+          <h2 tabindex="0" class="skeleton">Lorem ipsum dolor sit amet</h2>
+          <img class="restaurant-detail-poster" src="./images/placeholders/placeholder.png" width: 100% height: 265px alt="skeleton" class="restaurant-detail-poster">
+      </div>
+  
+      <article class="restaurant-item">
+          <div class="thumbnail">
+              <img class="item-thumbnail" width: 100% height: 265px src="./images/placeholders/placeholder.png" alt="skeleton">
+              <p class="item-city">Lorem Ipsum</p>
+          </div>
+          <div class="item-content">
+              <p class="content-rating">Rating: }</p>
+              <h3 class="skeleton"><a Lorem ipsum dolor sit amet.></a></h3>
+              <p class="skeleton">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur debitis deleniti dicta dolorem dolorum eos exercitationem labore laboriosam magni nihil, nobis obcaecati optio perspiciatis placeat qui recusandae saepe sapiente sequi totam ullam ut.</p>
+          </div>
+      </article>
+      `;
+  }
+  return template;
+};
+
 const createRestaurantDetailTemplate = (restaurant) => `
     <div class="restaurant-detail-container">
         <div class="restaurant-detail-thumbnail">
             <h2 tabindex="0" class="restaurant-detail-name">${restaurant.name}</h2>
-            <img src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}" alt="${restaurant.name}" class="restaurant-detail-poster">
+            <img data-src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}" width: 100% height: 265px src="./images/laceholderps/placeholder.png" alt="${restaurant.name}" class="restaurant-detail-poster lazyload">
         </div>
         <div class="restaurant-detail-info">
             <h2 tabindex="0" class="information-title">Information</h2>
@@ -58,7 +84,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
     <article class="restaurant-item">
         <div class="thumbnail">
-            <img class="item-thumbnail" loading="lazy" src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}" alt="${restaurant.name}">
+            <img class="item-thumbnail lazyload" width: 100% height: 265px src="./images/placeholders/placeholder.png" data-src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}" alt="${restaurant.name}">
             <p class="item-city">Kota ${restaurant.city}</p>
         </div>
         <div class="item-content">
@@ -86,4 +112,5 @@ export {
   createRestaurantDetailTemplate,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
+  createSkeletonMovieTemplate,
 };

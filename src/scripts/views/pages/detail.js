@@ -1,13 +1,13 @@
 import RestaurantDataSource from '../../data/data-source';
 import UrlParser from '../../routes/url-parser';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
-import { createRestaurantDetailTemplate } from '../templates/template-creator';
+import { createRestaurantDetailTemplate, createSkeletonMovieTemplate } from '../templates/template-creator';
 
 const DetailPage = {
   async render() {
     return `
           <main id="main" tabindex="0">
-            <div id="restaurant-detail" class="restaurant-detail"></div>
+            <div id="restaurant-detail" class="restaurant-detail">${createSkeletonMovieTemplate(20)}</div>
             <div id="likeButtonContainer"></div>
           </main>
         `;
