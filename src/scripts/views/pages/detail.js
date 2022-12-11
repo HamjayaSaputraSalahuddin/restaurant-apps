@@ -1,6 +1,7 @@
 import RestaurantDataSource from '../../data/data-source';
+import FavoriteRestaurantIdb from '../../data/favorite-idb';
 import UrlParser from '../../routes/url-parser';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
 import { createRestaurantDetailTemplate, createSkeletonMovieTemplate } from '../templates/template-creator';
 
 const DetailPage = {
@@ -19,8 +20,9 @@ const DetailPage = {
     const restaurantContainer = document.querySelector('#restaurant-detail');
     restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
 
-    LikeButtonInitiator.init({
+    LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      favoriteResto: FavoriteRestaurantIdb,
       resto: {
         pictureId: restaurant.pictureId,
         id: restaurant.id,
