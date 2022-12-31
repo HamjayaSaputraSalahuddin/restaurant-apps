@@ -72,13 +72,21 @@ html, body {
   opacity: 0.9;
 }
 
+@media
+  (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) { 
+  .hero {
+    background-image: url('../public/images/heros/hero-image_4.jpg');
+  }
+}
+
 .hero-inner {
   margin: 0 auto;
   max-width: 800px;
   color: #fff;
 }
 
-.hero-title {
+.hero-title { 
   font-weight: 600;
   font-size: 46px;
 }

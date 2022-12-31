@@ -3,7 +3,7 @@ import { createRestaurantItemTemplate, createSkeletonMovieTemplate } from '../te
 
 const LikePage = {
   async render() {
-    return `  
+    return `
           <section class="content">
             <div class="explore">
               <h2  tabindex="0" class="explore-label">Favorite Restaurant</h2>
